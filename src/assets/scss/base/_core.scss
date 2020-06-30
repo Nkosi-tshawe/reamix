@@ -208,3 +208,9 @@ img {
 .setting-label {
     max-width: calc(100% - 100px);
 }
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

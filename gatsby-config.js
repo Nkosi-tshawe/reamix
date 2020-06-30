@@ -42,22 +42,22 @@ module.exports = {
           verboseOutput: true,
       }
       },
-      // {
-      //   resolve: 'gatsby-source-apiserver',
-      //   options: {
-      //       url: 'https://zamusic.org/wp-json/wp/v2/categories',
-      //       method: 'get',
-      //       headers: {
-      //           'Content-Type': 'application/json'
-      //       },
-      //       typePrefix: 'internal__',
-      //       name: `categories`,
-      //       params: {
-      //         per_page: 20
-      //       },
-      //       verboseOutput: true,
-      //   }
-      //   },
+      {
+        resolve: 'gatsby-source-apiserver',
+        options: {
+            url: 'https://zamusic.org/wp-json/wp/v2/categories',
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            typePrefix: 'internal__',
+            name: `categories`,
+            params: {
+              per_page: 20
+            },
+            verboseOutput: true,
+        }
+        },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,

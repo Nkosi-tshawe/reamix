@@ -17,6 +17,7 @@ export const query = graphql`query {
       content {
         rendered
       }
+      jetpack_featured_media_url
     }
   }
 }`

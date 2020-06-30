@@ -9,7 +9,8 @@ export default function SectionHeading(props) {
                         <h4>{ props.title}</h4>
                          <p>{ props.subtitle}</p>
                     </div>
-                    <Link to={props.page} className="btn btn-sm btn-pill btn-air btn-warning">View All</Link>
+                    {  (props.page) ?  <Link to={props.page} className="btn btn-sm btn-pill btn-air btn-warning">View All</Link> : <></>  }
+                    
                 </div>
                 <hr/>
         </div>

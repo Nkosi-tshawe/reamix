@@ -1,6 +1,9 @@
 import React from 'react';
+import handleClick from '../utils/handleClick';
 
 export default function Player() {
+
+    const clickEvent = handleClick;
     return (
         <div id="audioPlayer" className="player-warning">
 
@@ -55,22 +58,22 @@ export default function Player() {
                     </button>
                     <ul className="dropdown-menu">
                         <li className="dropdown-item">
-                            <a href="javascript:void(0);" className="dropdown-link">
+                            <a href="clickEvent" className="dropdown-link">
                                 <i className="la la-heart-o"></i> <span>Favorite</span>
                             </a>
                         </li>
                         <li className="dropdown-item">
-                            <a href="javascript:void(0);" className="dropdown-link">
+                            <a href="clickEvent" className="dropdown-link">
                                 <i className="la la-plus"></i> <span>Add to Playlist</span>
                             </a>
                         </li>
                         <li className="dropdown-item">
-                            <a href="javascript:void(0);" className="dropdown-link">
+                            <a href="clickEvent" className="dropdown-link">
                                 <i className="la la-download"></i> <span>Download</span>
                             </a>
                         </li>
                         <li className="dropdown-item">
-                            <a href="javascript:void(0);" className="dropdown-link">
+                            <a href="clickEvent" className="dropdown-link">
                                 <i className="la la-share-alt"></i> <span>Share</span>
                             </a>
                         </li>

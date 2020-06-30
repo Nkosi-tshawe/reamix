@@ -5,7 +5,13 @@
 .custom-card {
     .custom-card--img {
         position: relative;
-
+        a.external {
+            &:before {
+                content:"";
+                display: block;
+                padding-top:100%;
+            }
+        }
         .custom-card--info {
             @include absolute(top 0 right 0 left 0);
 
@@ -25,6 +31,10 @@
         }
 
         img {
+            position: absolute;
+            top:0;
+            height:100%;
+            object-fit: cover;
             width: 100%;
         }
 

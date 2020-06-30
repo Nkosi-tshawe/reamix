@@ -24,6 +24,9 @@ $cyan:      #26bebf;
 $teal:      #20c997;
 
 //== Marge base colors in theme colors array
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&display=swap');
+
 $theme-colors: ();
 $theme-colors: map-merge(
     (
@@ -38,6 +41,8 @@ $theme-colors: map-merge(
         "dark":       $gray-900
     ), $theme-colors
 );
+
+
 
 // Heading font
 $heading-font-family: 'Roboto Slab', serif !default;

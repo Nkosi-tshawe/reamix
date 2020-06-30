@@ -15,13 +15,13 @@ export default function Header(props) {
 
               <ul className="header-options d-flex align-items-center">
                     <li>
-                        <a href="javascript:void(0);" data-toggle="modal" data-target="#lang" className="language">
+                        <a href="#" data-toggle="modal" data-target="#lang" className="language">
                             <span>Language</span>
                             <img src="../assets/images/svg/translate.svg" alt=""/>
                         </a>
                     </li>
                     <li className="dropdown fade-in">
-                        <a href="javascript:void(0);" className="d-flex align-items-center py-2" role="button" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="#" className="d-flex align-items-center py-2" role="button" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div className="avatar avatar-sm avatar-circle"><img src="assets/images/users/thumb.jpg" alt="user"/></div>
                             <span className="pl-2">Halo Admin</span>
                         </a>
