@@ -1,0 +1,64 @@
+import React,{useEffect,useRef,useState} from 'react';
+import CustomCard from './custom-card';
+// import Slider from 'react-slick';
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import "./carouse.module.scss";
+import Swiper from 'swiper';
+import 'swiper/css/swiper.css';
+import './carouse.module.css';
+
+// import Carousel from 'nuka-carousel';
+const settings ={
+        slidesPerView: 5,
+        spaceBetween: 30,
+        pagination: { el: '.swiper-pagination', clickable: true},
+        breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1200: {
+              slidesPerView: 4,
+              spaceBetween: 20,  
+            },
+            1440: {
+              slidesPerView:5,
+              spaceBetween: 20,  
+            }
+          }
+    }
+
+export default function Carousel(props) {
+
+    const swiper = useRef(null);
+    // const [posts,setPosts] = useState();
+    const posts = props.posts.nodes;
+    useEffect(()=>{
+        swiper.current= new Swiper('.swiper-container',settings);
+        // this.setState({posts: data});
+        // setPosts(props.posts);
+        },[]);
+        console.log('Posts ->',posts);    
+    return (
+            <div className="col">
+               <div className="swiper-container" style={{width:'100%',height:'100%',overflow:'hidden'}}>       
+                  <div className="swiper-wrapper">
+                     { posts && posts.map((post,index)=>(
+                        <div className="swiper-slide" key={index}>
+                            <CustomCard key={index} post={post} />    
+                        </div>
+                     )) }
+                  </div>
+              </div>
+          </div>
+    )
+}
