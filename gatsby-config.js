@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+<<<<<<< HEAD
 // const activeEnv =  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
 // const v8 = require('v8');
 // v8.total_available_size = 8192;
@@ -17,6 +18,8 @@
 // require("dotenv").config({
 //   path:`.env.${activeEnv}`,
 // });
+=======
+>>>>>>> bd0ca9725452bb2421fc5ec7bc1ef3f857a98a96
 
 module.exports = {
   siteMetadata: {
@@ -41,6 +44,7 @@ module.exports = {
       },
     },
     {
+<<<<<<< HEAD
       resolve: "gatsby-source-wordpress",
       options: {
         /*
@@ -157,10 +161,46 @@ module.exports = {
       //   ],
       },
     },
+=======
+      resolve: 'gatsby-source-apiserver',
+      options: {
+          url: 'https://zamusic.org/wp-json/wp/v2/posts',
+          method: 'get',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          typePrefix: 'internal__',
+          name: `posts`,
+          params: {
+            per_page: 20
+          },
+          verboseOutput: true,
+      }
+      },
+      {
+        resolve: 'gatsby-source-apiserver',
+        options: {
+            url: 'https://zamusic.org/wp-json/wp/v2/categories',
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            typePrefix: 'internal__',
+            name: `categories`,
+            params: {
+              per_page: 20
+            },
+            verboseOutput: true,
+        }
+        },
+>>>>>>> bd0ca9725452bb2421fc5ec7bc1ef3f857a98a96
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+<<<<<<< HEAD
     'gatsby-transformer-remark'
+=======
+>>>>>>> bd0ca9725452bb2421fc5ec7bc1ef3f857a98a96
   ],
 }
